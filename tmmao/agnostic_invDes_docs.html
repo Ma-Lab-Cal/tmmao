@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://localhost:8080/agnostic_invDes/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc 0.10.0">
+<title>agnostic_invDes API documentation</title>
+<meta name="description" content="">
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin="">
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin="">
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin="">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="" src="./agnostic_invDes_docs_files/highlight.min.js.download" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin=""></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<nav class="http-server-breadcrumbs">
+<a href="http://localhost:8080/">All packages</a>
+</nav>
+<h1 class="title">Module <code>agnostic_invDes</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">from</span> copy <span class="hljs-keyword">import</span> deepcopy
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> random, uniform, randint, choice
+<span class="hljs-keyword">from</span> scipy.optimize <span class="hljs-keyword">import</span> minimize
+<span class="hljs-keyword">from</span> agnostic_linear_adjoint <span class="hljs-keyword">import</span> agnostic_linear_adjoint
+<span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime
+<span class="hljs-keyword">import</span> warnings
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">termOpt</span>(<span class="hljs-params">Exception</span>):</span>
+    <span class="hljs-string">"""Nothing to see here. Move along.
+    
+        Since I have very little control of `scipy.minimize` via the api, I had to get creative to allow for dynamic scheduling/parameter mutation during optimization. This is a special
+        exception defined for that purpose. You as a user should never see it raised.
+    """</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">agnostic_invDes</span>(<span class="hljs-params">agnostic_linear_adjoint</span>):</span>
+    <span class="hljs-string">"""Runs an optimization
+    
+    ##Subclasses
+    
+    `agnostic_linear_adjoint`: Computes the adjoint fields and gradients.
+    
+    ##Attributes
+    
+    `simDict`: Dictionary. Contains data used in current optimization iteration. Keys/entries are:
+    ```
+    {'fields':#Array-like of array-likes of numpy arrays, such that `simDict['fields'][n][j]`=e_j for the `n`th simPoint,
+     'transferMatrices': #Array-like of array-likes of numpy arrays, such that `simDict['transferMatrices'][n][j]`=T^{j+1,j} for the `n`th simPoint
+     'parameters': #Array-like of floats. The current value of the optimization parameters such that `simDict['parameters'][m]`=phi_m. Note that during linesearch, this set of phi_m may differ from the actual current structure of the device; see `minimize`'s L-BFGS-B documentation, such as it is,
+     'previousCostFunction': #Float. The previous iteration's cost function
+     'iteration': #Int. The current iteration.}
+    ```
+
+    `res`: `optimizationResults` instance. Houses the results of the optimization; these are updated dynamically during optimization as far as is possible. See `optimizationResults` for attributes.
+
+    `L`: FLoat. The current cost function.
+
+    `Lphys`: Float. The current value of the physics terms in the cost function, if provided by the user's cost function.
+
+    `Lreg`: Float. The current value of the regularization terms in the cost function, if provided by the user's cost function.
+
+    `debug_verbosity`: Bool. If `True`, provides increased verbosity for debugging purposes.
+
+    `bounds`: Array-like of two-element array-likes. The current bounds of each optimization parameter, if doing bounded optimization.
+        
+    Methods:
+    
+        `updatePhysicsFunctions`: Updates some or all of the physics functions given to the class constructor at instantiation.
+
+        `callback`: Callback function handed to minimize, called after every iteration. Updates `res` attributes, and interfaces with the scheduler and any parameter mutators. It can be conveient to call `callback()` manually to add a set of paramters to the
+            `evo` dictionary outside of an optimization iteration, a strategy used in `agnostic_director`.
+
+        `optimize`: Primary API for inverse design. Runs the optimization given initial parameters, and returns `res`.
+
+        `simulate`: Primary API for simulation. Runs a simulation given a set of optimization parameters.
+        
+    Raises:
+    
+        `RuntimeWarning`: Warning raised by `scipy.minimize` if it judges convergence to be too slow. It thinks more or less everything is too slow, so ignore it unless you're actually experiencing convergence issues.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self,costFunction,costFunction_gradPhi,costFunction_gradE,globalBoundaries,transferMatrices,transferMatrices_gradPhi,scheduler=<span class="hljs-string">''</span>,paramPruner=<span class="hljs-string">''</span></span>):</span>
+        <span class="hljs-string">"""
+        ##Arguments
+        `costFunction`: callable. Accepts `simDict` as argument, returns `L`: Scalar. The cost function.
+         
+        `costFunction_gradPhi`: callable. Accepts `simDict` as argument, returns `dLdphi`: Array-like of scalars. The partial derivatives of the cost function wrt the optimization parameters, such that `dLdphi[m]`=dL/dphi_m
+            
+        `costFunction_gradE`: callable. Accepts `simDict` as argument, returns `dLde`: Array-like of array-likes of numpy arrays or equivalent. The partial derivatives of the cost function wrt the fields, such that `dLde[n][j]`=dL/de_j for simPoint `n`.
+            
+        `globalBoundaries`: callable. Accepts `simDict` as argument, returns `gbcs`: Array-like of three-element array likes. The global boundaries, such that `gbcs[n]`=[A,B,c] for simPoint `n`, where A.e_0+B.e_N=c
+            
+        `transferMatrices`: callable. Accepts `simDict` as argument, returns `all_tms`: Array-like of array-likes of numpy arrays or equivalent. The transfer matrices, such that `all_tms[n][j]`=T^{j+1,j} for simPoint `n`.
+            
+        `transferMatrices_gradPhi`: callable. Accepts `simDict` as argument, returns `dTdphi`: Array-like of array-likes of array-likes of numpy arrays or equivalent. The partial derivatives of the transfer matrices wrt the optimization parameters, such that `dTdphi[n][m][j]`=dT^{j+1,j}/dphi_m for simPoint `n`.
+            
+        `scheduler`: callable or non-callable; optional. If callable, must accept `scheduler(L_prev-&gt;float,L_cur-&gt;float, its-&gt;int)` where `L_prev` is the previous cost function, `L_cur` the current cost function, and `its` the current iteration.
+            It should return nothing. The scheduler can dynamically update cost function metaparameters during optimization, up to once each iteration; this updating is done internally by the interfacing code (see `agnostic_director`).
+            If scheduler is a non-callable, dynamic scheduling is disabled, and you're stuck with whatever metaparameters you started with throughout the optimization.
+            
+        `paramPruner`: callable or non-callable; optional. If callable, must accept `paramPruner(x-&gt;array-like, its-&gt;int)` where `x` is the current set of optimization parameters and `its` is the current iteration. Must return `x_new`: array-like. New set of optimization parameters.
+            
+        This function is intended to allow mutation of optimization parameters external to the minimizer during optimization, for instance purging layers which have been ablated by the algorithm. Note that if you are using bounded
+        optimization and remove elements `x`, you must update the `bounds` attribute of this object to match. Otherwise, the `bounds` attribute will simply be concatenated at the current length of `x`. If non-callable, external parameter mutation is disabled
+        """</span>
+        self.costFunction,self.costFunction_gradPhi,self.costFunction_gradE,self.globalBoundaries,self.transferMatrices,self.transferMatrices_gradPhi,self.scheduler,self.paramPruner=costFunction,costFunction_gradPhi,costFunction_gradE,globalBoundaries,transferMatrices,transferMatrices_gradPhi,scheduler,paramPruner
+        self.simDict={<span class="hljs-string">'fields'</span>:[],<span class="hljs-string">'transferMatrices'</span>:[],<span class="hljs-string">'parameters'</span>:[],<span class="hljs-string">'previousCostFunction'</span>:np.inf,<span class="hljs-string">'iteration'</span>:<span class="hljs-number">0</span>,}
+        self.res=optimizationResults()<span class="hljs-comment">#Instantiate the optimizationResults object, which will be returned to the user upon completion of optimization</span>
+        self.iterations=<span class="hljs-number">0</span>
+        self.evo=[]
+        self.L=np.inf
+        self.Lphys=<span class="hljs-number">0</span>
+        self.Lreg=<span class="hljs-number">0</span>
+        self.debug_verbosity=<span class="hljs-literal">False</span>
+        agnostic_linear_adjoint.__init__(self)
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-comment">#Call this method to change one or more of the interfacing functions provided when the object was instantiated. </span>
+    <span class="hljs-comment">#Arguments have the same form as in __init__()</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">updatePhysicsFunctions</span>(<span class="hljs-params">self,costFunction=<span class="hljs-string">''</span>,costFunction_gradPhi=<span class="hljs-string">''</span>,costFunction_gradE=<span class="hljs-string">''</span>,transferMatrices=<span class="hljs-string">''</span>,transferMatrices_gradPhi=<span class="hljs-string">''</span>,scheduler=<span class="hljs-string">''</span>,paramPruner=<span class="hljs-string">''</span></span>):</span>
+        <span class="hljs-string">"""Optionally updates some or all functions passed to the constructor during optimization. Any argument which is not a callable is not updated. See the `__init__` docstring for a description of the arguments."""</span>
+        <span class="hljs-keyword">if</span> callable(costFunction):
+            self.costFunction=costFunction
+        <span class="hljs-keyword">if</span> callable(costFunction_gradPhi):
+            self.costFunction_gradPhi=costFunction_gradPhi
+        <span class="hljs-keyword">if</span> callable(costFunction_gradE):
+            self.costFunction_gradE=costFunction_gradE
+        <span class="hljs-keyword">if</span> callable(transferMatrices):
+            self.transferMatrices=transferMatrices
+        <span class="hljs-keyword">if</span> callable(transferMatrices_gradPhi):
+            self.transferMatrices_gradPhi=transferMatrices_gradPhi
+        <span class="hljs-keyword">if</span> callable(scheduler):
+            self.scheduler=secheduler
+        <span class="hljs-keyword">if</span> callable(paramPruner):
+            self.paramPruner=paramPruner
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-comment">#Callback is triggered after every optimization iteration</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">callback</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Callback function handed to `minimize`, called after every iteration. 
+        
+        Updates `res` attributes, and interfaces with the scheduler and any parameter mutators. It can be conveient to call `callback()` manually to add a set of paramters to the
+        `evo` dictionary outside of an optimization iteration, a strategy used in `agnostic_director`.
+            
+        ##Arguments
+        
+        `x`: Array-like of floats. Current value of optimization parameters, such that `x[m]`=phi_m
+        """</span>
+        self.cb_triggered=<span class="hljs-literal">True</span>
+        self.first_call=<span class="hljs-literal">True</span>
+        <span class="hljs-comment">#Add the current cost function and parameters to the evolution tracker</span>
+        self.evo.append({<span class="hljs-string">'costFunction'</span>:self.L,<span class="hljs-string">'parameters'</span>:x,<span class="hljs-string">'costFunction-Physical'</span>:self.Lphys,<span class="hljs-string">'costFunction-Regularization'</span>:self.Lreg})
+        <span class="hljs-comment">#Update the previous cost function in simDict, in case this is needed by the user to determine cost function weights</span>
+        self.simDict[<span class="hljs-string">'previousCostFunction'</span>]=self.L
+        self.simDict[<span class="hljs-string">'iteration'</span>]+=<span class="hljs-number">1</span>
+        <span class="hljs-comment">#If we are in verbose mode and it's time to print a result, do that</span>
+        <span class="hljs-keyword">if</span> self.verbose&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> self.iterations%self.verbose==<span class="hljs-number">0</span>:
+            print(<span class="hljs-string">'Cost Function: '</span>+str(self.L))
+        self.pruned=<span class="hljs-literal">False</span>
+        <span class="hljs-keyword">if</span> callable(self.paramPruner) <span class="hljs-keyword">and</span> self.during_opt:
+            self._callback_prune(x)<span class="hljs-comment">#If we're doing parameter pruning, prune some parameters</span>
+        <span class="hljs-keyword">if</span> callable(self.scheduler) <span class="hljs-keyword">and</span> self.during_opt:
+            self._callback_ext(x)<span class="hljs-comment">#If we're doing dynamic scheduling, decide whether to update the cost function and/or terminate now.</span>
+        self.iterations+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span>
+    
+    <span class="hljs-comment">#Ok, so, here's a thing. Minimize can't handle a scheduler changing cost function weights on an iteration-by-iteration basis. This is because if the weight is increased after iteration n such that L_{n+1}&gt;L_n, then the termination condition L_n-L_{n+1}&lt;=ftol is automatically triggered. </span>
+    <span class="hljs-comment">#What we can do is refuse to actually terminate in this case. We go ahead and have the scheduler in the interfacing code change the weights sent to the cost function in the physics package. If the change is small enough that  L_{n+1}&lt;L_n, all the better. If L_{n+1}&gt;L_n, then minimize will</span>
+    <span class="hljs-comment">#return an abnormal termination condition and stop. We ignore this, insert the current optParams as initial values in a new minimize call, and run it again with the new scheduler values. We repeat until BOTH L_{n+1}&lt;L_n AND L_n-L_{n+1}&lt;=ftol, which causes self.terminate to flip to True,</span>
+    <span class="hljs-comment">#which causes the iterated minimize call loop to break once minimize finishes next (which should be immediately).</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_callback_ext</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Interfaces with the scheduler"""</span>
+        self.res.nit+=<span class="hljs-number">1</span>
+        self.scheduler(self.Lprev,self.L,self.iterations,x,no_cb=<span class="hljs-literal">False</span>)<span class="hljs-comment">#Call scheduler to allow the interfacing code to update dynamic weights internally if desired</span>
+        <span class="hljs-comment">#If the new cost function is bigger than the old one, minimize is about to end prematurely. Set Lprev to the current L, plus 10*ftol so</span>
+        <span class="hljs-comment">#that we don't immediately satisfy L_n-L_{n+1}&lt;=ftol next time this function gets called, and carry on</span>
+        <span class="hljs-keyword">if</span> self.Lprev&lt;self.L:
+            self.Lprev=self.L+<span class="hljs-number">10</span>*self.ftol
+        <span class="hljs-comment">#If the new cost function is smaller than the old one and the difference is within tolerance, we're done. Terminate at the next opportunity</span>
+        <span class="hljs-keyword">elif</span> (self.Lprev-self.L)/max(self.Lprev,self.L,<span class="hljs-number">1</span>)&lt;=self.ftol:
+            self.terminate=<span class="hljs-literal">True</span>
+            self.Lprev=self.L
+        <span class="hljs-comment">#Otherwise, update the previous cost function as the current cost function and carry on</span>
+        <span class="hljs-keyword">else</span>:
+            self.Lprev=self.L
+        <span class="hljs-keyword">return</span>
+    
+    <span class="hljs-comment">#But wait, it gets worse. You think changing cost function parameters makes scipy sad, try chaging the optimziation parameters. The only way to externally change the optimization parameters then carry on the optimization is to terminate </span>
+    <span class="hljs-comment">#the current minimize call and restart it. So that's what we do. We collect the new optParams. If they are different, we raise a custom termOpt error to kill minimize (yes, throwing errors is literally the only way to do that), </span>
+    <span class="hljs-comment">#and flag that this termination is not real using self.pruned. The optimize method will see the self.pruned flag, realize that it should carry on optimizing despite minimize ending, and re-call minimize with the new parameters/bounds.</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_callback_prune</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Interfaces with parameter mutator"""</span>
+        self.xp,self.bounds=self.paramPruner(x,self.iterations)
+        <span class="hljs-keyword">if</span> list(self.xp)!=list(x):
+            <span class="hljs-keyword">if</span> len(self.bounds)!=len(self.xp):
+                self.bounds=self.bounds[:len(self.xp)]
+            self.pruned=<span class="hljs-literal">True</span>
+            <span class="hljs-keyword">raise</span> termOpt<span class="hljs-comment">#Hackiest solution in the history of hacky solutions</span>
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-comment">#Determine what kind of bounds we were given, and if we were given bounds at all</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_processBounds</span>(<span class="hljs-params">self,bounds,initialParameters</span>):</span>
+        <span class="hljs-string">"""Filters out different ways the user could input bounds"""</span>
+        <span class="hljs-keyword">if</span> len(bounds)==<span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> [],<span class="hljs-literal">False</span>
+        <span class="hljs-keyword">elif</span> <span class="hljs-keyword">not</span> hasattr(bounds[<span class="hljs-number">0</span>],<span class="hljs-string">'__iter__'</span>):
+            <span class="hljs-keyword">return</span> [bounds,]*len(initialParameters),<span class="hljs-literal">True</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> bounds,<span class="hljs-literal">True</span>
+
+    <span class="hljs-comment">#initialParameters: array-like, a list of initial values for the optimization parameters</span>
+    <span class="hljs-comment">#verbose: integer, how often the code talks to you. verbose=0 means no messages before, during, or after optimization. verbose&gt;0 means updates every *verbose* iterations, and a message when optimization begins and completes</span>
+    <span class="hljs-comment">#ftol: real number, the relative reduction in cost function to terminate the optimization. See scipy.minimize documentation</span>
+    <span class="hljs-comment">#gtol: real number, the relative change in gradient to terminate the optimization. See scipy.minimize documentation</span>
+    <span class="hljs-comment">#bounds: either empty array-like, length-2 array-like, or array-like of length-2 array-likes. If empty, optimization will be unbounded and use BFGS gradient descent. If length-2, these will be the lower and upper bounds</span>
+    <span class="hljs-comment">#        of every optimization parameter. If an array of length-2 arrays, there should be one element per optimization parameter such that bounds[m][0],bounds[m][1] are the lower,upper bounds of initialParameters[m]</span>
+    <span class="hljs-comment">#scipy's minimize function gives me a lot less control over optimization than I would prefer, so I've had to get creative. Fair warning, this function gets a bit messy.</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">optimize</span>(<span class="hljs-params">self,initialParameters,verbose=<span class="hljs-number">0</span>,ftol=<span class="hljs-number">1E-9</span>,gtol=<span class="hljs-number">1E-5</span>,bounds=[]</span>):</span>
+        <span class="hljs-string">"""Primary API for inverse design. Runs the optimization given initial parameters, and returns `res`.
+            
+        ##Arguments
+        
+        `initialParameters`: Array-like of floats. Starting values of optimization parameters, such that `initialParameters[m]`=phi_m
+        
+        `verbose`: Int; optional. Determines how much to print to consol. Set to 0 for silent mode. If &gt;0, will print the current value of the cost function every `verbose` iterations. Any nonzero value will also activate some other printouts, like messages
+            for when overhead tasks are done, etc.
+            
+        `ftol`: Float; optional. Cost function improvment tolerance for termination. See `scipy.minimize` documentation
+        
+        `gtol`: Float; optional. Gradient tolerance for termination. See `scipy.minimize` documentation
+        
+        `bounds`: Empty array-like OR two-element array-like OR array-like of two-element array-likes; optional. If empty, bounded optimization is disabled, and the BFGS algorithm is used. If a two-element array, these bounds will be used for all optimziation
+            parameters. If an array-like of two-element array likes, must have one two-element bound array per optimization parameter.
+                
+        Returns:
+        
+            `res`: `optimizationResults` instance. Houses the results of the optimization. Intended to match format of scipy's `OptimizeResult` object. See `optimizationResults` for attributes.
+        """</span>
+        self.first_call,self.terminate,self.Lprev,self.iterations,self.ftol,self.gtol,self.verbose=<span class="hljs-literal">True</span>,<span class="hljs-literal">False</span>,-np.inf,<span class="hljs-number">0</span>,ftol,gtol,verbose
+        <span class="hljs-keyword">del</span> self.evo[:]
+        self.bounds,use_bounds=self._processBounds(bounds,initialParameters)<span class="hljs-comment">#Determine what kind of bounds we're using</span>
+        self._costFunc_wrapper(initialParameters)<span class="hljs-comment">#Callback does not trigger until after the first evolution of the parameters; to ensure evo includes the initial point, simulate it first</span>
+        self.during_opt=<span class="hljs-literal">False</span>
+        self.callback(initialParameters)<span class="hljs-comment">#And add it to evo</span>
+        <span class="hljs-keyword">if</span> verbose&gt;<span class="hljs-number">0</span>:
+            print(<span class="hljs-string">'Initial simulation complete.'</span>)
+            print(<span class="hljs-string">'Now beginning optimization.'</span>)
+        self.iterations=<span class="hljs-number">0</span>
+        self.res.x=initialParameters<span class="hljs-comment">#The initial set of parameters are, understandably, the initial set of parameters</span>
+        optimization_start=datetime.now()<span class="hljs-comment">#Overhead is done, now the optimization clock starts ticking</span>
+        self.during_opt=<span class="hljs-literal">True</span>
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> self.terminate:<span class="hljs-comment">#While we still want to force further minimization</span>
+            self.pruned=<span class="hljs-literal">False</span><span class="hljs-comment">#Assume there is no external manipulation of params this iteration</span>
+            <span class="hljs-keyword">if</span> self.debug_verbosity:
+                print(<span class="hljs-string">'Loop Restarted'</span>)
+            self.cb_triggered=<span class="hljs-literal">False</span><span class="hljs-comment">#Assume we aren't going to trigger callback this iteration</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> callable(self.scheduler):
+                self.terminate=<span class="hljs-literal">True</span><span class="hljs-comment">#If we're not doing dynamic scheduling, only go one round of minimze</span>
+            <span class="hljs-keyword">try</span>:<span class="hljs-comment">#Because I need to terminate minimize if params are externally manipulated, I have to raise an error in callback if this happens. Screen for that error</span>
+                <span class="hljs-keyword">if</span> use_bounds:<span class="hljs-comment">#Determine whether we're using BFGS or its more restrained cousin, L-BFGS-B</span>
+                    scipy_res=minimize(self._costFunc_wrapper,self.res.x,jac=<span class="hljs-literal">True</span>,method=<span class="hljs-string">'L-BFGS-B'</span>,bounds=self.bounds,callback=self.callback,options={<span class="hljs-string">'gtol'</span>:gtol,<span class="hljs-string">'ftol'</span>:ftol})
+                <span class="hljs-keyword">else</span>:
+                    scipy_res=minimize(self._costFunc_wrapper,self.res.x,jac=<span class="hljs-literal">True</span>,method=<span class="hljs-string">'BFGS'</span>,callback=self.callback,options={<span class="hljs-string">'gtol'</span>:gtol,<span class="hljs-string">'ftol'</span>:ftol})
+                self.res.x=scipy_res.x<span class="hljs-comment">#If minimize successfully completed, then no external param alterations occured, and our new set of params are the results of the minimization. nfev, njev, and nit are all tracked independently in callback and _costFunc_wrapper, and other scipy.res attributes will only be collected on the last minimize call, which is guaranteed to not have an external param alteration.</span>
+            <span class="hljs-keyword">except</span> termOpt:<span class="hljs-comment">#If the params were externally manipulated</span>
+                self.terminate=<span class="hljs-literal">False</span><span class="hljs-comment">#Restart the loop with the mutated params</span>
+                self.res.x=self.xp<span class="hljs-comment">#Set the new params</span>
+            <span class="hljs-comment">#print('Lprev: '+str(self.Lprev))</span>
+            <span class="hljs-comment">#print('L: '+str(self.L))</span>
+            <span class="hljs-comment">#print('res message: '+str(scipy_res.message))</span>
+            
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.cb_triggered <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.terminate <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.pruned:<span class="hljs-comment">#If the optimizer is unable to find an improvement, it can get trapped in a doom loop in which it fails to call callback to break out of this loop. This fixes that issue</span>
+                self.terminate=self.scheduler(self.Lprev,self.L,self.iterations,self.res.x,no_cb=<span class="hljs-literal">True</span>)
+                scipy_res.message=<span class="hljs-string">'Terminated due to meeting scheduler criteria'</span>
+                scipy_res.success=<span class="hljs-literal">True</span>
+                scipy_res.status=<span class="hljs-number">0</span>
+                <span class="hljs-keyword">if</span> self.debug_verbosity:
+                    print(<span class="hljs-string">'cb not triggered. Terminate flag: '</span>+str(self.terminate))
+        <span class="hljs-comment">#Update attributes of optimizationResults object</span>
+        self.res.time=datetime.now()-optimization_start
+        self.res.message,self.res.success,self.res.status,self.res.fun,self.res.jac=scipy_res.message,scipy_res.success,scipy_res.status,scipy_res.fun,scipy_res.jac
+        self.res.evo=self.evo
+        <span class="hljs-keyword">if</span> verbose&gt;<span class="hljs-number">0</span>:
+            print(self.res)
+        <span class="hljs-keyword">return</span> self.res
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_costFunc_wrapper</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Wrapper for cost function. This is what `minimize` actually comunicates with"""</span>
+        self.res.nfev+=<span class="hljs-number">1</span>
+        self.res.njev+=<span class="hljs-number">1</span>
+        self.simulate(x)<span class="hljs-comment">#Run the simulation to get the transfer matrices/fields</span>
+        cf_rs=self.costFunction(self.simDict)
+        <span class="hljs-keyword">if</span> hasattr(cf_rs,<span class="hljs-string">'__iter__'</span>):
+            self.L,self.Lphys,self.Lreg=cf_rs
+        <span class="hljs-keyword">else</span>:
+            self.L=cf_rs
+        dtms,nonzero_dtms=self.transferMatrices_gradPhi(self.simDict)<span class="hljs-comment">#Get dT/dPhi</span>
+        dLdphi=self.costFunction_gradPhi(self.simDict)<span class="hljs-comment">#Get dL/dPhi (partial derivative, not the total derivative dL/dx)</span>
+        dLde=self.costFunction_gradE(self.simDict)<span class="hljs-comment">#Get dL/dE</span>
+        self.solve_adjoint(self.simDict[<span class="hljs-string">'transferMatrices'</span>],self.simDict[<span class="hljs-string">'fields'</span>],dLdphi,dLde,dtms,self.global_bcs,nonzero_dtms)<span class="hljs-comment">#Get the total derivative dL/dx</span>
+        self.first_call=<span class="hljs-literal">False</span><span class="hljs-comment">#Minimize will call this up to 20 times during linesearch. Flag the first call. Not currently used for anything except debugging, but there are situations when you want the interfacing code to know when the first linesearch is happening. This is here just in case.</span>
+        <span class="hljs-keyword">return</span> self.L,self.ala_dLdx <span class="hljs-comment">#Return cost function and gradient</span>
+
+    <span class="hljs-comment">#This is a seperate function so that the user can run a simulation and find the fields without wasting time with the derivatives if they're, say, plotting the results of a previous optimization.</span>
+    <span class="hljs-comment">#Just instantiate this class with the correct globalBoundaries() and transferMatrices() and dummy functions for the rest, give this method the parameters, and extract the fields via agnostic_invDes.simDict['fields']</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">simulate</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Primary API for simulation. Runs a simulation given a set of optimization parameters.
+        
+        ##Arguments
+        
+        `x`: Array-like of floats. Current values of optimization parameters, such that `x[m]`=phi_m
+        """</span>
+        self.simDict[<span class="hljs-string">'parameters'</span>]=x<span class="hljs-comment">#Update the current optimization parameters</span>
+        <span class="hljs-keyword">del</span> self.simDict[<span class="hljs-string">'fields'</span>][:]<span class="hljs-comment">#Clear entries from previous function calls</span>
+        <span class="hljs-keyword">del</span> self.simDict[<span class="hljs-string">'transferMatrices'</span>][:]
+        self.global_bcs=self.globalBoundaries(self.simDict)<span class="hljs-comment">#Get the set of global boundaries given these optimization parameters. Currently, dependence of global boundaries on parameters is not supported, but this is here in case I want to make it possible later</span>
+        self.simDict[<span class="hljs-string">'transferMatrices'</span>]=self.transferMatrices(self.simDict)<span class="hljs-comment">#Get the transfer matrices</span>
+        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(self.simDict[<span class="hljs-string">'transferMatrices'</span>])):<span class="hljs-comment">#Run through the simPoints</span>
+            gbs=self.global_bcs[k]
+            self.simDict[<span class="hljs-string">'fields'</span>].append(self.solve_e(self.simDict[<span class="hljs-string">'transferMatrices'</span>][k],gbs[<span class="hljs-number">0</span>],gbs[<span class="hljs-number">1</span>],gbs[<span class="hljs-number">2</span>]))<span class="hljs-comment">#Solve for the fields at this simPoint</span>
+        <span class="hljs-keyword">return</span> 
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">optimizationResults</span>:</span>
+    <span class="hljs-string">"""Houses results of the optimization.
+    
+    This is intended to be a clone of scipy's `OptimizeResults` object. Since `agnostic_invDes` will terminate and restart `minimize` on a possibly regular basis, a different object had to be defined to keep track of the actual total number of 
+    function evaluations, iterations, time taken, etc. Also has the added benefit of being updated dynamically as minimize progresses, so it can be accessed by interfacing code to take a peak at how things are progressing, and 
+    of having the very useful `evo` attribute.
+    
+    ##Attributes
+    
+    `x`: Array-like of floats. Current/final values of optimization parameters, such that `x[m]`=phi_m
+    
+    `jac`: Array-like of floats. Current gradient, such that `jac[m]`=dL/dphi_m
+    
+    `time`: `datetime` object. Time taken to perform minimization. Will be 0 until minimization completed
+    
+    `evo`: List of dictionaries. Tracks the evolution of the cost function and optimization parameters during every iteration of the optimization, such that `evo[it]`=`evoDictInst` where
+    ```
+        evoDictInst={'costFunction':#Float, value of cost function at iteration it,
+                     'parameters':#Array-like of floats, the optimization parameters at iteration it,
+                     'costFunction-Physical':#Float, the value of the physical component of the cost function at iteration it if provided, else 0,
+                     'costFunction-Regularization':#Float, the value of the regularization component of the cost function at iteration it if provided, else 0}
+    ```
+     
+    `nfev`: Int. Number of function evaluations; will not in general be equal to the number of iterations as linesearch typically involves multiple function calls.
+    
+    `njev`: Int. Number of gradient evaluations; will almost always be equal to `nfev`.
+    
+    `nit`: Int. Number of optimization iterations.
+    
+    `maxcv`: Float. Maximum constraint violation.
+    
+    `success`: Bool, whether optimizer exited successfully.
+    
+    `status`: Int. Termination status of the optimizer.
+    
+    `fun`: Float. Final value of the cost function.
+    
+    `message`: Description of cause of termination.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span> 
+        self.x=<span class="hljs-string">'Optimization Failure'</span>
+        self.jac=<span class="hljs-string">'Optimization Failure'</span>
+        self.time=<span class="hljs-number">0</span>
+        self.evo=[]
+        self.nfev=<span class="hljs-number">0</span>
+        self.njev=<span class="hljs-number">0</span>
+        self.nit=<span class="hljs-number">0</span>
+        self.maxcv=<span class="hljs-number">0</span>
+        self.success=<span class="hljs-literal">False</span>
+        self.status=<span class="hljs-number">0</span>
+        self.fun=<span class="hljs-number">0</span>
+        self.message=<span class="hljs-string">'Optimization Failure'</span>
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prep_display</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""Sets up printout of object"""</span>
+        vs=<span class="hljs-string">''</span>
+        xcopy=deepcopy(self.x)
+        jaccopy=deepcopy(self.jac)
+        <span class="hljs-keyword">if</span> len(self.x)&gt;<span class="hljs-number">10</span>:
+            x1str,x2str=str(list(xcopy[:<span class="hljs-number">5</span>])),str(list(xcopy[<span class="hljs-number">-5</span>:]))
+            xcopy=x1str.rstrip(<span class="hljs-string">']'</span>)+<span class="hljs-string">',...,'</span>+x2str.lstrip(<span class="hljs-string">'['</span>)
+            jac1str,jac2str=str(list(jaccopy[:<span class="hljs-number">5</span>])),str(list(jaccopy[<span class="hljs-number">-5</span>:]))
+            jaccopy=jac1str.rstrip(<span class="hljs-string">']'</span>)+<span class="hljs-string">',...,'</span>+jac2str.lstrip(<span class="hljs-string">'['</span>)
+        evo_str=str(self.evo)
+        vs+=(<span class="hljs-string">'message: '</span>+self.message+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'success: '</span>+str(self.success)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">' status: '</span>+str(self.status)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    fun: '</span>+str(self.fun)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'      x: '</span>+str(xcopy)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    nit: '</span>+str(self.nit)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    jac: '</span>+str(jaccopy)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'   nfev: '</span>+str(self.nfev)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'   njev: '</span>+str(self.njev)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'   time: '</span>+str(self.time)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    evo: '</span>+evo_str[:<span class="hljs-number">20</span>]+<span class="hljs-string">'...'</span>+evo_str[<span class="hljs-number">-10</span>:])
+        <span class="hljs-keyword">return</span> vs
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__repr__</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""What happens to the object when you try and display it in console"""</span>
+        vs=self.prep_display()
+        <span class="hljs-keyword">return</span> vs
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""What happens to the object when you try and turn it into a string"""</span>
+        vs=self.prep_display()
+        <span class="hljs-keyword">return</span> vs</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="agnostic_invDes.random"><code class="name flex">
+<span>def <span class="ident">random</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>random() -&gt; x in the interval [0, 1).</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="agnostic_invDes.agnostic_invDes"><code class="flex name class">
+<span>class <span class="ident">agnostic_invDes</span></span>
+<span>(</span><span>costFunction, costFunction_gradPhi, costFunction_gradE, globalBoundaries, transferMatrices, transferMatrices_gradPhi, scheduler='', paramPruner='')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Runs an optimization</p>
+<h2 id="subclasses">Subclasses</h2>
+<p><code>agnostic_linear_adjoint</code>: Computes the adjoint fields and gradients.</p>
+<h2 id="attributes">Attributes</h2>
+<p><code>simDict</code>: Dictionary. Contains data used in current optimization iteration. Keys/entries are:</p>
+<pre><code class="hljs php">{<span class="hljs-string">'fields'</span>:<span class="hljs-comment">#Array-like of array-likes of numpy arrays, such that `simDict['fields'][n][j]`=e_j for the `n`th simPoint,</span>
+ <span class="hljs-string">'transferMatrices'</span>: <span class="hljs-comment">#Array-like of array-likes of numpy arrays, such that `simDict['transferMatrices'][n][j]`=T^{j+1,j} for the `n`th simPoint</span>
+ <span class="hljs-string">'parameters'</span>: <span class="hljs-comment">#Array-like of floats. The current value of the optimization parameters such that `simDict['parameters'][m]`=phi_m. Note that during linesearch, this set of phi_m may differ from the actual current structure of the device; see `minimize`'s L-BFGS-B documentation, such as it is,</span>
+ <span class="hljs-string">'previousCostFunction'</span>: <span class="hljs-comment">#Float. The previous iteration's cost function</span>
+ <span class="hljs-string">'iteration'</span>: <span class="hljs-comment">#Int. The current iteration.}</span>
+</code></pre>
+<p><code>res</code>: <code><a title="agnostic_invDes.optimizationResults" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.optimizationResults">optimizationResults</a></code> instance. Houses the results of the optimization; these are updated dynamically during optimization as far as is possible. See <code><a title="agnostic_invDes.optimizationResults" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.optimizationResults">optimizationResults</a></code> for attributes.</p>
+<p><code>L</code>: FLoat. The current cost function.</p>
+<p><code>Lphys</code>: Float. The current value of the physics terms in the cost function, if provided by the user's cost function.</p>
+<p><code>Lreg</code>: Float. The current value of the regularization terms in the cost function, if provided by the user's cost function.</p>
+<p><code>debug_verbosity</code>: Bool. If <code>True</code>, provides increased verbosity for debugging purposes.</p>
+<p><code>bounds</code>: Array-like of two-element array-likes. The current bounds of each optimization parameter, if doing bounded optimization.</p>
+<h2 id="methods">Methods</h2>
+<p><code>updatePhysicsFunctions</code>: Updates some or all of the physics functions given to the class constructor at instantiation.</p>
+<p><code>callback</code>: Callback function handed to minimize, called after every iteration. Updates <code>res</code> attributes, and interfaces with the scheduler and any parameter mutators. It can be conveient to call <code>callback()</code> manually to add a set of paramters to the
+<code>evo</code> dictionary outside of an optimization iteration, a strategy used in <code>agnostic_director</code>.</p>
+<p><code>optimize</code>: Primary API for inverse design. Runs the optimization given initial parameters, and returns <code>res</code>.</p>
+<p><code>simulate</code>: Primary API for simulation. Runs a simulation given a set of optimization parameters.</p>
+<h2 id="raises">Raises</h2>
+<p><code>RuntimeWarning</code>: Warning raised by <code><a title="scipy.minimize" href="http://localhost:8080/scipy.minimize.ext">scipy.minimize</a></code> if it judges convergence to be too slow. It thinks more or less everything is too slow, so ignore it unless you're actually experiencing convergence issues.</p>
+<h2 id="arguments">Arguments</h2>
+<p><code>costFunction</code>: callable. Accepts <code>simDict</code> as argument, returns <code>L</code>: Scalar. The cost function.</p>
+<p><code>costFunction_gradPhi</code>: callable. Accepts <code>simDict</code> as argument, returns <code>dLdphi</code>: Array-like of scalars. The partial derivatives of the cost function wrt the optimization parameters, such that <code>dLdphi[m]</code>=dL/dphi_m</p>
+<p><code>costFunction_gradE</code>: callable. Accepts <code>simDict</code> as argument, returns <code>dLde</code>: Array-like of array-likes of numpy arrays or equivalent. The partial derivatives of the cost function wrt the fields, such that <code>dLde[n][j]</code>=dL/de_j for simPoint <code>n</code>.</p>
+<p><code>globalBoundaries</code>: callable. Accepts <code>simDict</code> as argument, returns <code>gbcs</code>: Array-like of three-element array likes. The global boundaries, such that <code>gbcs[n]</code>=[A,B,c] for simPoint <code>n</code>, where A.e_0+B.e_N=c</p>
+<p><code>transferMatrices</code>: callable. Accepts <code>simDict</code> as argument, returns <code>all_tms</code>: Array-like of array-likes of numpy arrays or equivalent. The transfer matrices, such that <code>all_tms[n][j]</code>=T^{j+1,j} for simPoint <code>n</code>.</p>
+<p><code>transferMatrices_gradPhi</code>: callable. Accepts <code>simDict</code> as argument, returns <code>dTdphi</code>: Array-like of array-likes of array-likes of numpy arrays or equivalent. The partial derivatives of the transfer matrices wrt the optimization parameters, such that <code>dTdphi[n][m][j]</code>=dT^{j+1,j}/dphi_m for simPoint <code>n</code>.</p>
+<p><code>scheduler</code>: callable or non-callable; optional. If callable, must accept <code>scheduler(L_prev-&gt;float,L_cur-&gt;float, its-&gt;int)</code> where <code>L_prev</code> is the previous cost function, <code>L_cur</code> the current cost function, and <code>its</code> the current iteration.
+It should return nothing. The scheduler can dynamically update cost function metaparameters during optimization, up to once each iteration; this updating is done internally by the interfacing code (see <code>agnostic_director</code>).
+If scheduler is a non-callable, dynamic scheduling is disabled, and you're stuck with whatever metaparameters you started with throughout the optimization.</p>
+<p><code>paramPruner</code>: callable or non-callable; optional. If callable, must accept <code>paramPruner(x-&gt;array-like, its-&gt;int)</code> where <code>x</code> is the current set of optimization parameters and <code>its</code> is the current iteration. Must return <code>x_new</code>: array-like. New set of optimization parameters.</p>
+<p>This function is intended to allow mutation of optimization parameters external to the minimizer during optimization, for instance purging layers which have been ablated by the algorithm. Note that if you are using bounded
+optimization and remove elements <code>x</code>, you must update the <code>bounds</code> attribute of this object to match. Otherwise, the <code>bounds</code> attribute will simply be concatenated at the current length of <code>x</code>. If non-callable, external parameter mutation is disabled</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">agnostic_invDes</span>(<span class="hljs-params">agnostic_linear_adjoint</span>):</span>
+    <span class="hljs-string">"""Runs an optimization
+    
+    ##Subclasses
+    
+    `agnostic_linear_adjoint`: Computes the adjoint fields and gradients.
+    
+    ##Attributes
+    
+    `simDict`: Dictionary. Contains data used in current optimization iteration. Keys/entries are:
+    ```
+    {'fields':#Array-like of array-likes of numpy arrays, such that `simDict['fields'][n][j]`=e_j for the `n`th simPoint,
+     'transferMatrices': #Array-like of array-likes of numpy arrays, such that `simDict['transferMatrices'][n][j]`=T^{j+1,j} for the `n`th simPoint
+     'parameters': #Array-like of floats. The current value of the optimization parameters such that `simDict['parameters'][m]`=phi_m. Note that during linesearch, this set of phi_m may differ from the actual current structure of the device; see `minimize`'s L-BFGS-B documentation, such as it is,
+     'previousCostFunction': #Float. The previous iteration's cost function
+     'iteration': #Int. The current iteration.}
+    ```
+
+    `res`: `optimizationResults` instance. Houses the results of the optimization; these are updated dynamically during optimization as far as is possible. See `optimizationResults` for attributes.
+
+    `L`: FLoat. The current cost function.
+
+    `Lphys`: Float. The current value of the physics terms in the cost function, if provided by the user's cost function.
+
+    `Lreg`: Float. The current value of the regularization terms in the cost function, if provided by the user's cost function.
+
+    `debug_verbosity`: Bool. If `True`, provides increased verbosity for debugging purposes.
+
+    `bounds`: Array-like of two-element array-likes. The current bounds of each optimization parameter, if doing bounded optimization.
+        
+    Methods:
+    
+        `updatePhysicsFunctions`: Updates some or all of the physics functions given to the class constructor at instantiation.
+
+        `callback`: Callback function handed to minimize, called after every iteration. Updates `res` attributes, and interfaces with the scheduler and any parameter mutators. It can be conveient to call `callback()` manually to add a set of paramters to the
+            `evo` dictionary outside of an optimization iteration, a strategy used in `agnostic_director`.
+
+        `optimize`: Primary API for inverse design. Runs the optimization given initial parameters, and returns `res`.
+
+        `simulate`: Primary API for simulation. Runs a simulation given a set of optimization parameters.
+        
+    Raises:
+    
+        `RuntimeWarning`: Warning raised by `scipy.minimize` if it judges convergence to be too slow. It thinks more or less everything is too slow, so ignore it unless you're actually experiencing convergence issues.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self,costFunction,costFunction_gradPhi,costFunction_gradE,globalBoundaries,transferMatrices,transferMatrices_gradPhi,scheduler=<span class="hljs-string">''</span>,paramPruner=<span class="hljs-string">''</span></span>):</span>
+        <span class="hljs-string">"""
+        ##Arguments
+        `costFunction`: callable. Accepts `simDict` as argument, returns `L`: Scalar. The cost function.
+         
+        `costFunction_gradPhi`: callable. Accepts `simDict` as argument, returns `dLdphi`: Array-like of scalars. The partial derivatives of the cost function wrt the optimization parameters, such that `dLdphi[m]`=dL/dphi_m
+            
+        `costFunction_gradE`: callable. Accepts `simDict` as argument, returns `dLde`: Array-like of array-likes of numpy arrays or equivalent. The partial derivatives of the cost function wrt the fields, such that `dLde[n][j]`=dL/de_j for simPoint `n`.
+            
+        `globalBoundaries`: callable. Accepts `simDict` as argument, returns `gbcs`: Array-like of three-element array likes. The global boundaries, such that `gbcs[n]`=[A,B,c] for simPoint `n`, where A.e_0+B.e_N=c
+            
+        `transferMatrices`: callable. Accepts `simDict` as argument, returns `all_tms`: Array-like of array-likes of numpy arrays or equivalent. The transfer matrices, such that `all_tms[n][j]`=T^{j+1,j} for simPoint `n`.
+            
+        `transferMatrices_gradPhi`: callable. Accepts `simDict` as argument, returns `dTdphi`: Array-like of array-likes of array-likes of numpy arrays or equivalent. The partial derivatives of the transfer matrices wrt the optimization parameters, such that `dTdphi[n][m][j]`=dT^{j+1,j}/dphi_m for simPoint `n`.
+            
+        `scheduler`: callable or non-callable; optional. If callable, must accept `scheduler(L_prev-&gt;float,L_cur-&gt;float, its-&gt;int)` where `L_prev` is the previous cost function, `L_cur` the current cost function, and `its` the current iteration.
+            It should return nothing. The scheduler can dynamically update cost function metaparameters during optimization, up to once each iteration; this updating is done internally by the interfacing code (see `agnostic_director`).
+            If scheduler is a non-callable, dynamic scheduling is disabled, and you're stuck with whatever metaparameters you started with throughout the optimization.
+            
+        `paramPruner`: callable or non-callable; optional. If callable, must accept `paramPruner(x-&gt;array-like, its-&gt;int)` where `x` is the current set of optimization parameters and `its` is the current iteration. Must return `x_new`: array-like. New set of optimization parameters.
+            
+        This function is intended to allow mutation of optimization parameters external to the minimizer during optimization, for instance purging layers which have been ablated by the algorithm. Note that if you are using bounded
+        optimization and remove elements `x`, you must update the `bounds` attribute of this object to match. Otherwise, the `bounds` attribute will simply be concatenated at the current length of `x`. If non-callable, external parameter mutation is disabled
+        """</span>
+        self.costFunction,self.costFunction_gradPhi,self.costFunction_gradE,self.globalBoundaries,self.transferMatrices,self.transferMatrices_gradPhi,self.scheduler,self.paramPruner=costFunction,costFunction_gradPhi,costFunction_gradE,globalBoundaries,transferMatrices,transferMatrices_gradPhi,scheduler,paramPruner
+        self.simDict={<span class="hljs-string">'fields'</span>:[],<span class="hljs-string">'transferMatrices'</span>:[],<span class="hljs-string">'parameters'</span>:[],<span class="hljs-string">'previousCostFunction'</span>:np.inf,<span class="hljs-string">'iteration'</span>:<span class="hljs-number">0</span>,}
+        self.res=optimizationResults()<span class="hljs-comment">#Instantiate the optimizationResults object, which will be returned to the user upon completion of optimization</span>
+        self.iterations=<span class="hljs-number">0</span>
+        self.evo=[]
+        self.L=np.inf
+        self.Lphys=<span class="hljs-number">0</span>
+        self.Lreg=<span class="hljs-number">0</span>
+        self.debug_verbosity=<span class="hljs-literal">False</span>
+        agnostic_linear_adjoint.__init__(self)
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-comment">#Call this method to change one or more of the interfacing functions provided when the object was instantiated. </span>
+    <span class="hljs-comment">#Arguments have the same form as in __init__()</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">updatePhysicsFunctions</span>(<span class="hljs-params">self,costFunction=<span class="hljs-string">''</span>,costFunction_gradPhi=<span class="hljs-string">''</span>,costFunction_gradE=<span class="hljs-string">''</span>,transferMatrices=<span class="hljs-string">''</span>,transferMatrices_gradPhi=<span class="hljs-string">''</span>,scheduler=<span class="hljs-string">''</span>,paramPruner=<span class="hljs-string">''</span></span>):</span>
+        <span class="hljs-string">"""Optionally updates some or all functions passed to the constructor during optimization. Any argument which is not a callable is not updated. See the `__init__` docstring for a description of the arguments."""</span>
+        <span class="hljs-keyword">if</span> callable(costFunction):
+            self.costFunction=costFunction
+        <span class="hljs-keyword">if</span> callable(costFunction_gradPhi):
+            self.costFunction_gradPhi=costFunction_gradPhi
+        <span class="hljs-keyword">if</span> callable(costFunction_gradE):
+            self.costFunction_gradE=costFunction_gradE
+        <span class="hljs-keyword">if</span> callable(transferMatrices):
+            self.transferMatrices=transferMatrices
+        <span class="hljs-keyword">if</span> callable(transferMatrices_gradPhi):
+            self.transferMatrices_gradPhi=transferMatrices_gradPhi
+        <span class="hljs-keyword">if</span> callable(scheduler):
+            self.scheduler=secheduler
+        <span class="hljs-keyword">if</span> callable(paramPruner):
+            self.paramPruner=paramPruner
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-comment">#Callback is triggered after every optimization iteration</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">callback</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Callback function handed to `minimize`, called after every iteration. 
+        
+        Updates `res` attributes, and interfaces with the scheduler and any parameter mutators. It can be conveient to call `callback()` manually to add a set of paramters to the
+        `evo` dictionary outside of an optimization iteration, a strategy used in `agnostic_director`.
+            
+        ##Arguments
+        
+        `x`: Array-like of floats. Current value of optimization parameters, such that `x[m]`=phi_m
+        """</span>
+        self.cb_triggered=<span class="hljs-literal">True</span>
+        self.first_call=<span class="hljs-literal">True</span>
+        <span class="hljs-comment">#Add the current cost function and parameters to the evolution tracker</span>
+        self.evo.append({<span class="hljs-string">'costFunction'</span>:self.L,<span class="hljs-string">'parameters'</span>:x,<span class="hljs-string">'costFunction-Physical'</span>:self.Lphys,<span class="hljs-string">'costFunction-Regularization'</span>:self.Lreg})
+        <span class="hljs-comment">#Update the previous cost function in simDict, in case this is needed by the user to determine cost function weights</span>
+        self.simDict[<span class="hljs-string">'previousCostFunction'</span>]=self.L
+        self.simDict[<span class="hljs-string">'iteration'</span>]+=<span class="hljs-number">1</span>
+        <span class="hljs-comment">#If we are in verbose mode and it's time to print a result, do that</span>
+        <span class="hljs-keyword">if</span> self.verbose&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> self.iterations%self.verbose==<span class="hljs-number">0</span>:
+            print(<span class="hljs-string">'Cost Function: '</span>+str(self.L))
+        self.pruned=<span class="hljs-literal">False</span>
+        <span class="hljs-keyword">if</span> callable(self.paramPruner) <span class="hljs-keyword">and</span> self.during_opt:
+            self._callback_prune(x)<span class="hljs-comment">#If we're doing parameter pruning, prune some parameters</span>
+        <span class="hljs-keyword">if</span> callable(self.scheduler) <span class="hljs-keyword">and</span> self.during_opt:
+            self._callback_ext(x)<span class="hljs-comment">#If we're doing dynamic scheduling, decide whether to update the cost function and/or terminate now.</span>
+        self.iterations+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span>
+    
+    <span class="hljs-comment">#Ok, so, here's a thing. Minimize can't handle a scheduler changing cost function weights on an iteration-by-iteration basis. This is because if the weight is increased after iteration n such that L_{n+1}&gt;L_n, then the termination condition L_n-L_{n+1}&lt;=ftol is automatically triggered. </span>
+    <span class="hljs-comment">#What we can do is refuse to actually terminate in this case. We go ahead and have the scheduler in the interfacing code change the weights sent to the cost function in the physics package. If the change is small enough that  L_{n+1}&lt;L_n, all the better. If L_{n+1}&gt;L_n, then minimize will</span>
+    <span class="hljs-comment">#return an abnormal termination condition and stop. We ignore this, insert the current optParams as initial values in a new minimize call, and run it again with the new scheduler values. We repeat until BOTH L_{n+1}&lt;L_n AND L_n-L_{n+1}&lt;=ftol, which causes self.terminate to flip to True,</span>
+    <span class="hljs-comment">#which causes the iterated minimize call loop to break once minimize finishes next (which should be immediately).</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_callback_ext</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Interfaces with the scheduler"""</span>
+        self.res.nit+=<span class="hljs-number">1</span>
+        self.scheduler(self.Lprev,self.L,self.iterations,x,no_cb=<span class="hljs-literal">False</span>)<span class="hljs-comment">#Call scheduler to allow the interfacing code to update dynamic weights internally if desired</span>
+        <span class="hljs-comment">#If the new cost function is bigger than the old one, minimize is about to end prematurely. Set Lprev to the current L, plus 10*ftol so</span>
+        <span class="hljs-comment">#that we don't immediately satisfy L_n-L_{n+1}&lt;=ftol next time this function gets called, and carry on</span>
+        <span class="hljs-keyword">if</span> self.Lprev&lt;self.L:
+            self.Lprev=self.L+<span class="hljs-number">10</span>*self.ftol
+        <span class="hljs-comment">#If the new cost function is smaller than the old one and the difference is within tolerance, we're done. Terminate at the next opportunity</span>
+        <span class="hljs-keyword">elif</span> (self.Lprev-self.L)/max(self.Lprev,self.L,<span class="hljs-number">1</span>)&lt;=self.ftol:
+            self.terminate=<span class="hljs-literal">True</span>
+            self.Lprev=self.L
+        <span class="hljs-comment">#Otherwise, update the previous cost function as the current cost function and carry on</span>
+        <span class="hljs-keyword">else</span>:
+            self.Lprev=self.L
+        <span class="hljs-keyword">return</span>
+    
+    <span class="hljs-comment">#But wait, it gets worse. You think changing cost function parameters makes scipy sad, try chaging the optimziation parameters. The only way to externally change the optimization parameters then carry on the optimization is to terminate </span>
+    <span class="hljs-comment">#the current minimize call and restart it. So that's what we do. We collect the new optParams. If they are different, we raise a custom termOpt error to kill minimize (yes, throwing errors is literally the only way to do that), </span>
+    <span class="hljs-comment">#and flag that this termination is not real using self.pruned. The optimize method will see the self.pruned flag, realize that it should carry on optimizing despite minimize ending, and re-call minimize with the new parameters/bounds.</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_callback_prune</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Interfaces with parameter mutator"""</span>
+        self.xp,self.bounds=self.paramPruner(x,self.iterations)
+        <span class="hljs-keyword">if</span> list(self.xp)!=list(x):
+            <span class="hljs-keyword">if</span> len(self.bounds)!=len(self.xp):
+                self.bounds=self.bounds[:len(self.xp)]
+            self.pruned=<span class="hljs-literal">True</span>
+            <span class="hljs-keyword">raise</span> termOpt<span class="hljs-comment">#Hackiest solution in the history of hacky solutions</span>
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-comment">#Determine what kind of bounds we were given, and if we were given bounds at all</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_processBounds</span>(<span class="hljs-params">self,bounds,initialParameters</span>):</span>
+        <span class="hljs-string">"""Filters out different ways the user could input bounds"""</span>
+        <span class="hljs-keyword">if</span> len(bounds)==<span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> [],<span class="hljs-literal">False</span>
+        <span class="hljs-keyword">elif</span> <span class="hljs-keyword">not</span> hasattr(bounds[<span class="hljs-number">0</span>],<span class="hljs-string">'__iter__'</span>):
+            <span class="hljs-keyword">return</span> [bounds,]*len(initialParameters),<span class="hljs-literal">True</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> bounds,<span class="hljs-literal">True</span>
+
+    <span class="hljs-comment">#initialParameters: array-like, a list of initial values for the optimization parameters</span>
+    <span class="hljs-comment">#verbose: integer, how often the code talks to you. verbose=0 means no messages before, during, or after optimization. verbose&gt;0 means updates every *verbose* iterations, and a message when optimization begins and completes</span>
+    <span class="hljs-comment">#ftol: real number, the relative reduction in cost function to terminate the optimization. See scipy.minimize documentation</span>
+    <span class="hljs-comment">#gtol: real number, the relative change in gradient to terminate the optimization. See scipy.minimize documentation</span>
+    <span class="hljs-comment">#bounds: either empty array-like, length-2 array-like, or array-like of length-2 array-likes. If empty, optimization will be unbounded and use BFGS gradient descent. If length-2, these will be the lower and upper bounds</span>
+    <span class="hljs-comment">#        of every optimization parameter. If an array of length-2 arrays, there should be one element per optimization parameter such that bounds[m][0],bounds[m][1] are the lower,upper bounds of initialParameters[m]</span>
+    <span class="hljs-comment">#scipy's minimize function gives me a lot less control over optimization than I would prefer, so I've had to get creative. Fair warning, this function gets a bit messy.</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">optimize</span>(<span class="hljs-params">self,initialParameters,verbose=<span class="hljs-number">0</span>,ftol=<span class="hljs-number">1E-9</span>,gtol=<span class="hljs-number">1E-5</span>,bounds=[]</span>):</span>
+        <span class="hljs-string">"""Primary API for inverse design. Runs the optimization given initial parameters, and returns `res`.
+            
+        ##Arguments
+        
+        `initialParameters`: Array-like of floats. Starting values of optimization parameters, such that `initialParameters[m]`=phi_m
+        
+        `verbose`: Int; optional. Determines how much to print to consol. Set to 0 for silent mode. If &gt;0, will print the current value of the cost function every `verbose` iterations. Any nonzero value will also activate some other printouts, like messages
+            for when overhead tasks are done, etc.
+            
+        `ftol`: Float; optional. Cost function improvment tolerance for termination. See `scipy.minimize` documentation
+        
+        `gtol`: Float; optional. Gradient tolerance for termination. See `scipy.minimize` documentation
+        
+        `bounds`: Empty array-like OR two-element array-like OR array-like of two-element array-likes; optional. If empty, bounded optimization is disabled, and the BFGS algorithm is used. If a two-element array, these bounds will be used for all optimziation
+            parameters. If an array-like of two-element array likes, must have one two-element bound array per optimization parameter.
+                
+        Returns:
+        
+            `res`: `optimizationResults` instance. Houses the results of the optimization. Intended to match format of scipy's `OptimizeResult` object. See `optimizationResults` for attributes.
+        """</span>
+        self.first_call,self.terminate,self.Lprev,self.iterations,self.ftol,self.gtol,self.verbose=<span class="hljs-literal">True</span>,<span class="hljs-literal">False</span>,-np.inf,<span class="hljs-number">0</span>,ftol,gtol,verbose
+        <span class="hljs-keyword">del</span> self.evo[:]
+        self.bounds,use_bounds=self._processBounds(bounds,initialParameters)<span class="hljs-comment">#Determine what kind of bounds we're using</span>
+        self._costFunc_wrapper(initialParameters)<span class="hljs-comment">#Callback does not trigger until after the first evolution of the parameters; to ensure evo includes the initial point, simulate it first</span>
+        self.during_opt=<span class="hljs-literal">False</span>
+        self.callback(initialParameters)<span class="hljs-comment">#And add it to evo</span>
+        <span class="hljs-keyword">if</span> verbose&gt;<span class="hljs-number">0</span>:
+            print(<span class="hljs-string">'Initial simulation complete.'</span>)
+            print(<span class="hljs-string">'Now beginning optimization.'</span>)
+        self.iterations=<span class="hljs-number">0</span>
+        self.res.x=initialParameters<span class="hljs-comment">#The initial set of parameters are, understandably, the initial set of parameters</span>
+        optimization_start=datetime.now()<span class="hljs-comment">#Overhead is done, now the optimization clock starts ticking</span>
+        self.during_opt=<span class="hljs-literal">True</span>
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> self.terminate:<span class="hljs-comment">#While we still want to force further minimization</span>
+            self.pruned=<span class="hljs-literal">False</span><span class="hljs-comment">#Assume there is no external manipulation of params this iteration</span>
+            <span class="hljs-keyword">if</span> self.debug_verbosity:
+                print(<span class="hljs-string">'Loop Restarted'</span>)
+            self.cb_triggered=<span class="hljs-literal">False</span><span class="hljs-comment">#Assume we aren't going to trigger callback this iteration</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> callable(self.scheduler):
+                self.terminate=<span class="hljs-literal">True</span><span class="hljs-comment">#If we're not doing dynamic scheduling, only go one round of minimze</span>
+            <span class="hljs-keyword">try</span>:<span class="hljs-comment">#Because I need to terminate minimize if params are externally manipulated, I have to raise an error in callback if this happens. Screen for that error</span>
+                <span class="hljs-keyword">if</span> use_bounds:<span class="hljs-comment">#Determine whether we're using BFGS or its more restrained cousin, L-BFGS-B</span>
+                    scipy_res=minimize(self._costFunc_wrapper,self.res.x,jac=<span class="hljs-literal">True</span>,method=<span class="hljs-string">'L-BFGS-B'</span>,bounds=self.bounds,callback=self.callback,options={<span class="hljs-string">'gtol'</span>:gtol,<span class="hljs-string">'ftol'</span>:ftol})
+                <span class="hljs-keyword">else</span>:
+                    scipy_res=minimize(self._costFunc_wrapper,self.res.x,jac=<span class="hljs-literal">True</span>,method=<span class="hljs-string">'BFGS'</span>,callback=self.callback,options={<span class="hljs-string">'gtol'</span>:gtol,<span class="hljs-string">'ftol'</span>:ftol})
+                self.res.x=scipy_res.x<span class="hljs-comment">#If minimize successfully completed, then no external param alterations occured, and our new set of params are the results of the minimization. nfev, njev, and nit are all tracked independently in callback and _costFunc_wrapper, and other scipy.res attributes will only be collected on the last minimize call, which is guaranteed to not have an external param alteration.</span>
+            <span class="hljs-keyword">except</span> termOpt:<span class="hljs-comment">#If the params were externally manipulated</span>
+                self.terminate=<span class="hljs-literal">False</span><span class="hljs-comment">#Restart the loop with the mutated params</span>
+                self.res.x=self.xp<span class="hljs-comment">#Set the new params</span>
+            <span class="hljs-comment">#print('Lprev: '+str(self.Lprev))</span>
+            <span class="hljs-comment">#print('L: '+str(self.L))</span>
+            <span class="hljs-comment">#print('res message: '+str(scipy_res.message))</span>
+            
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.cb_triggered <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.terminate <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.pruned:<span class="hljs-comment">#If the optimizer is unable to find an improvement, it can get trapped in a doom loop in which it fails to call callback to break out of this loop. This fixes that issue</span>
+                self.terminate=self.scheduler(self.Lprev,self.L,self.iterations,self.res.x,no_cb=<span class="hljs-literal">True</span>)
+                scipy_res.message=<span class="hljs-string">'Terminated due to meeting scheduler criteria'</span>
+                scipy_res.success=<span class="hljs-literal">True</span>
+                scipy_res.status=<span class="hljs-number">0</span>
+                <span class="hljs-keyword">if</span> self.debug_verbosity:
+                    print(<span class="hljs-string">'cb not triggered. Terminate flag: '</span>+str(self.terminate))
+        <span class="hljs-comment">#Update attributes of optimizationResults object</span>
+        self.res.time=datetime.now()-optimization_start
+        self.res.message,self.res.success,self.res.status,self.res.fun,self.res.jac=scipy_res.message,scipy_res.success,scipy_res.status,scipy_res.fun,scipy_res.jac
+        self.res.evo=self.evo
+        <span class="hljs-keyword">if</span> verbose&gt;<span class="hljs-number">0</span>:
+            print(self.res)
+        <span class="hljs-keyword">return</span> self.res
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_costFunc_wrapper</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Wrapper for cost function. This is what `minimize` actually comunicates with"""</span>
+        self.res.nfev+=<span class="hljs-number">1</span>
+        self.res.njev+=<span class="hljs-number">1</span>
+        self.simulate(x)<span class="hljs-comment">#Run the simulation to get the transfer matrices/fields</span>
+        cf_rs=self.costFunction(self.simDict)
+        <span class="hljs-keyword">if</span> hasattr(cf_rs,<span class="hljs-string">'__iter__'</span>):
+            self.L,self.Lphys,self.Lreg=cf_rs
+        <span class="hljs-keyword">else</span>:
+            self.L=cf_rs
+        dtms,nonzero_dtms=self.transferMatrices_gradPhi(self.simDict)<span class="hljs-comment">#Get dT/dPhi</span>
+        dLdphi=self.costFunction_gradPhi(self.simDict)<span class="hljs-comment">#Get dL/dPhi (partial derivative, not the total derivative dL/dx)</span>
+        dLde=self.costFunction_gradE(self.simDict)<span class="hljs-comment">#Get dL/dE</span>
+        self.solve_adjoint(self.simDict[<span class="hljs-string">'transferMatrices'</span>],self.simDict[<span class="hljs-string">'fields'</span>],dLdphi,dLde,dtms,self.global_bcs,nonzero_dtms)<span class="hljs-comment">#Get the total derivative dL/dx</span>
+        self.first_call=<span class="hljs-literal">False</span><span class="hljs-comment">#Minimize will call this up to 20 times during linesearch. Flag the first call. Not currently used for anything except debugging, but there are situations when you want the interfacing code to know when the first linesearch is happening. This is here just in case.</span>
+        <span class="hljs-keyword">return</span> self.L,self.ala_dLdx <span class="hljs-comment">#Return cost function and gradient</span>
+
+    <span class="hljs-comment">#This is a seperate function so that the user can run a simulation and find the fields without wasting time with the derivatives if they're, say, plotting the results of a previous optimization.</span>
+    <span class="hljs-comment">#Just instantiate this class with the correct globalBoundaries() and transferMatrices() and dummy functions for the rest, give this method the parameters, and extract the fields via agnostic_invDes.simDict['fields']</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">simulate</span>(<span class="hljs-params">self,x</span>):</span>
+        <span class="hljs-string">"""Primary API for simulation. Runs a simulation given a set of optimization parameters.
+        
+        ##Arguments
+        
+        `x`: Array-like of floats. Current values of optimization parameters, such that `x[m]`=phi_m
+        """</span>
+        self.simDict[<span class="hljs-string">'parameters'</span>]=x<span class="hljs-comment">#Update the current optimization parameters</span>
+        <span class="hljs-keyword">del</span> self.simDict[<span class="hljs-string">'fields'</span>][:]<span class="hljs-comment">#Clear entries from previous function calls</span>
+        <span class="hljs-keyword">del</span> self.simDict[<span class="hljs-string">'transferMatrices'</span>][:]
+        self.global_bcs=self.globalBoundaries(self.simDict)<span class="hljs-comment">#Get the set of global boundaries given these optimization parameters. Currently, dependence of global boundaries on parameters is not supported, but this is here in case I want to make it possible later</span>
+        self.simDict[<span class="hljs-string">'transferMatrices'</span>]=self.transferMatrices(self.simDict)<span class="hljs-comment">#Get the transfer matrices</span>
+        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(self.simDict[<span class="hljs-string">'transferMatrices'</span>])):<span class="hljs-comment">#Run through the simPoints</span>
+            gbs=self.global_bcs[k]
+            self.simDict[<span class="hljs-string">'fields'</span>].append(self.solve_e(self.simDict[<span class="hljs-string">'transferMatrices'</span>][k],gbs[<span class="hljs-number">0</span>],gbs[<span class="hljs-number">1</span>],gbs[<span class="hljs-number">2</span>]))<span class="hljs-comment">#Solve for the fields at this simPoint</span>
+        <span class="hljs-keyword">return</span> </code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="agnostic_linear_adjoint.agnostic_linear_adjoint" href="http://localhost:8080/agnostic_linear_adjoint.agnostic_linear_adjoint.ext">agnostic_linear_adjoint.agnostic_linear_adjoint</a></li>
+<li><a title="agnostic_linear_adjoint.agnostic_linear_tmm" href="http://localhost:8080/agnostic_linear_adjoint.agnostic_linear_tmm.ext">agnostic_linear_adjoint.agnostic_linear_tmm</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="agnostic_invDes.agnostic_invDes.callback"><code class="name flex">
+<span>def <span class="ident">callback</span></span>(<span>self, x)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Callback function handed to <code>minimize</code>, called after every iteration. </p>
+<p>Updates <code>res</code> attributes, and interfaces with the scheduler and any parameter mutators. It can be conveient to call <code>callback()</code> manually to add a set of paramters to the
+<code>evo</code> dictionary outside of an optimization iteration, a strategy used in <code>agnostic_director</code>.</p>
+<h2 id="arguments">Arguments</h2>
+<p><code>x</code>: Array-like of floats. Current value of optimization parameters, such that <code>x[m]</code>=phi_m</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">callback</span>(<span class="hljs-params">self,x</span>):</span>
+    <span class="hljs-string">"""Callback function handed to `minimize`, called after every iteration. 
+    
+    Updates `res` attributes, and interfaces with the scheduler and any parameter mutators. It can be conveient to call `callback()` manually to add a set of paramters to the
+    `evo` dictionary outside of an optimization iteration, a strategy used in `agnostic_director`.
+        
+    ##Arguments
+    
+    `x`: Array-like of floats. Current value of optimization parameters, such that `x[m]`=phi_m
+    """</span>
+    self.cb_triggered=<span class="hljs-literal">True</span>
+    self.first_call=<span class="hljs-literal">True</span>
+    <span class="hljs-comment">#Add the current cost function and parameters to the evolution tracker</span>
+    self.evo.append({<span class="hljs-string">'costFunction'</span>:self.L,<span class="hljs-string">'parameters'</span>:x,<span class="hljs-string">'costFunction-Physical'</span>:self.Lphys,<span class="hljs-string">'costFunction-Regularization'</span>:self.Lreg})
+    <span class="hljs-comment">#Update the previous cost function in simDict, in case this is needed by the user to determine cost function weights</span>
+    self.simDict[<span class="hljs-string">'previousCostFunction'</span>]=self.L
+    self.simDict[<span class="hljs-string">'iteration'</span>]+=<span class="hljs-number">1</span>
+    <span class="hljs-comment">#If we are in verbose mode and it's time to print a result, do that</span>
+    <span class="hljs-keyword">if</span> self.verbose&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> self.iterations%self.verbose==<span class="hljs-number">0</span>:
+        print(<span class="hljs-string">'Cost Function: '</span>+str(self.L))
+    self.pruned=<span class="hljs-literal">False</span>
+    <span class="hljs-keyword">if</span> callable(self.paramPruner) <span class="hljs-keyword">and</span> self.during_opt:
+        self._callback_prune(x)<span class="hljs-comment">#If we're doing parameter pruning, prune some parameters</span>
+    <span class="hljs-keyword">if</span> callable(self.scheduler) <span class="hljs-keyword">and</span> self.during_opt:
+        self._callback_ext(x)<span class="hljs-comment">#If we're doing dynamic scheduling, decide whether to update the cost function and/or terminate now.</span>
+    self.iterations+=<span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span></code></pre>
+</details>
+</dd>
+<dt id="agnostic_invDes.agnostic_invDes.optimize"><code class="name flex">
+<span>def <span class="ident">optimize</span></span>(<span>self, initialParameters, verbose=0, ftol=1e-09, gtol=1e-05, bounds=[])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Primary API for inverse design. Runs the optimization given initial parameters, and returns <code>res</code>.</p>
+<h2 id="arguments">Arguments</h2>
+<p><code>initialParameters</code>: Array-like of floats. Starting values of optimization parameters, such that <code>initialParameters[m]</code>=phi_m</p>
+<p><code>verbose</code>: Int; optional. Determines how much to print to consol. Set to 0 for silent mode. If &gt;0, will print the current value of the cost function every <code>verbose</code> iterations. Any nonzero value will also activate some other printouts, like messages
+for when overhead tasks are done, etc.</p>
+<p><code>ftol</code>: Float; optional. Cost function improvment tolerance for termination. See <code><a title="scipy.minimize" href="http://localhost:8080/scipy.minimize.ext">scipy.minimize</a></code> documentation</p>
+<p><code>gtol</code>: Float; optional. Gradient tolerance for termination. See <code><a title="scipy.minimize" href="http://localhost:8080/scipy.minimize.ext">scipy.minimize</a></code> documentation</p>
+<p><code>bounds</code>: Empty array-like OR two-element array-like OR array-like of two-element array-likes; optional. If empty, bounded optimization is disabled, and the BFGS algorithm is used. If a two-element array, these bounds will be used for all optimziation
+parameters. If an array-like of two-element array likes, must have one two-element bound array per optimization parameter.</p>
+<h2 id="returns">Returns</h2>
+<p><code>res</code>: <code><a title="agnostic_invDes.optimizationResults" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.optimizationResults">optimizationResults</a></code> instance. Houses the results of the optimization. Intended to match format of scipy's <code>OptimizeResult</code> object. See <code><a title="agnostic_invDes.optimizationResults" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.optimizationResults">optimizationResults</a></code> for attributes.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">optimize</span>(<span class="hljs-params">self,initialParameters,verbose=<span class="hljs-number">0</span>,ftol=<span class="hljs-number">1E-9</span>,gtol=<span class="hljs-number">1E-5</span>,bounds=[]</span>):</span>
+    <span class="hljs-string">"""Primary API for inverse design. Runs the optimization given initial parameters, and returns `res`.
+        
+    ##Arguments
+    
+    `initialParameters`: Array-like of floats. Starting values of optimization parameters, such that `initialParameters[m]`=phi_m
+    
+    `verbose`: Int; optional. Determines how much to print to consol. Set to 0 for silent mode. If &gt;0, will print the current value of the cost function every `verbose` iterations. Any nonzero value will also activate some other printouts, like messages
+        for when overhead tasks are done, etc.
+        
+    `ftol`: Float; optional. Cost function improvment tolerance for termination. See `scipy.minimize` documentation
+    
+    `gtol`: Float; optional. Gradient tolerance for termination. See `scipy.minimize` documentation
+    
+    `bounds`: Empty array-like OR two-element array-like OR array-like of two-element array-likes; optional. If empty, bounded optimization is disabled, and the BFGS algorithm is used. If a two-element array, these bounds will be used for all optimziation
+        parameters. If an array-like of two-element array likes, must have one two-element bound array per optimization parameter.
+            
+    Returns:
+    
+        `res`: `optimizationResults` instance. Houses the results of the optimization. Intended to match format of scipy's `OptimizeResult` object. See `optimizationResults` for attributes.
+    """</span>
+    self.first_call,self.terminate,self.Lprev,self.iterations,self.ftol,self.gtol,self.verbose=<span class="hljs-literal">True</span>,<span class="hljs-literal">False</span>,-np.inf,<span class="hljs-number">0</span>,ftol,gtol,verbose
+    <span class="hljs-keyword">del</span> self.evo[:]
+    self.bounds,use_bounds=self._processBounds(bounds,initialParameters)<span class="hljs-comment">#Determine what kind of bounds we're using</span>
+    self._costFunc_wrapper(initialParameters)<span class="hljs-comment">#Callback does not trigger until after the first evolution of the parameters; to ensure evo includes the initial point, simulate it first</span>
+    self.during_opt=<span class="hljs-literal">False</span>
+    self.callback(initialParameters)<span class="hljs-comment">#And add it to evo</span>
+    <span class="hljs-keyword">if</span> verbose&gt;<span class="hljs-number">0</span>:
+        print(<span class="hljs-string">'Initial simulation complete.'</span>)
+        print(<span class="hljs-string">'Now beginning optimization.'</span>)
+    self.iterations=<span class="hljs-number">0</span>
+    self.res.x=initialParameters<span class="hljs-comment">#The initial set of parameters are, understandably, the initial set of parameters</span>
+    optimization_start=datetime.now()<span class="hljs-comment">#Overhead is done, now the optimization clock starts ticking</span>
+    self.during_opt=<span class="hljs-literal">True</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> self.terminate:<span class="hljs-comment">#While we still want to force further minimization</span>
+        self.pruned=<span class="hljs-literal">False</span><span class="hljs-comment">#Assume there is no external manipulation of params this iteration</span>
+        <span class="hljs-keyword">if</span> self.debug_verbosity:
+            print(<span class="hljs-string">'Loop Restarted'</span>)
+        self.cb_triggered=<span class="hljs-literal">False</span><span class="hljs-comment">#Assume we aren't going to trigger callback this iteration</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> callable(self.scheduler):
+            self.terminate=<span class="hljs-literal">True</span><span class="hljs-comment">#If we're not doing dynamic scheduling, only go one round of minimze</span>
+        <span class="hljs-keyword">try</span>:<span class="hljs-comment">#Because I need to terminate minimize if params are externally manipulated, I have to raise an error in callback if this happens. Screen for that error</span>
+            <span class="hljs-keyword">if</span> use_bounds:<span class="hljs-comment">#Determine whether we're using BFGS or its more restrained cousin, L-BFGS-B</span>
+                scipy_res=minimize(self._costFunc_wrapper,self.res.x,jac=<span class="hljs-literal">True</span>,method=<span class="hljs-string">'L-BFGS-B'</span>,bounds=self.bounds,callback=self.callback,options={<span class="hljs-string">'gtol'</span>:gtol,<span class="hljs-string">'ftol'</span>:ftol})
+            <span class="hljs-keyword">else</span>:
+                scipy_res=minimize(self._costFunc_wrapper,self.res.x,jac=<span class="hljs-literal">True</span>,method=<span class="hljs-string">'BFGS'</span>,callback=self.callback,options={<span class="hljs-string">'gtol'</span>:gtol,<span class="hljs-string">'ftol'</span>:ftol})
+            self.res.x=scipy_res.x<span class="hljs-comment">#If minimize successfully completed, then no external param alterations occured, and our new set of params are the results of the minimization. nfev, njev, and nit are all tracked independently in callback and _costFunc_wrapper, and other scipy.res attributes will only be collected on the last minimize call, which is guaranteed to not have an external param alteration.</span>
+        <span class="hljs-keyword">except</span> termOpt:<span class="hljs-comment">#If the params were externally manipulated</span>
+            self.terminate=<span class="hljs-literal">False</span><span class="hljs-comment">#Restart the loop with the mutated params</span>
+            self.res.x=self.xp<span class="hljs-comment">#Set the new params</span>
+        <span class="hljs-comment">#print('Lprev: '+str(self.Lprev))</span>
+        <span class="hljs-comment">#print('L: '+str(self.L))</span>
+        <span class="hljs-comment">#print('res message: '+str(scipy_res.message))</span>
+        
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.cb_triggered <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.terminate <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.pruned:<span class="hljs-comment">#If the optimizer is unable to find an improvement, it can get trapped in a doom loop in which it fails to call callback to break out of this loop. This fixes that issue</span>
+            self.terminate=self.scheduler(self.Lprev,self.L,self.iterations,self.res.x,no_cb=<span class="hljs-literal">True</span>)
+            scipy_res.message=<span class="hljs-string">'Terminated due to meeting scheduler criteria'</span>
+            scipy_res.success=<span class="hljs-literal">True</span>
+            scipy_res.status=<span class="hljs-number">0</span>
+            <span class="hljs-keyword">if</span> self.debug_verbosity:
+                print(<span class="hljs-string">'cb not triggered. Terminate flag: '</span>+str(self.terminate))
+    <span class="hljs-comment">#Update attributes of optimizationResults object</span>
+    self.res.time=datetime.now()-optimization_start
+    self.res.message,self.res.success,self.res.status,self.res.fun,self.res.jac=scipy_res.message,scipy_res.success,scipy_res.status,scipy_res.fun,scipy_res.jac
+    self.res.evo=self.evo
+    <span class="hljs-keyword">if</span> verbose&gt;<span class="hljs-number">0</span>:
+        print(self.res)
+    <span class="hljs-keyword">return</span> self.res</code></pre>
+</details>
+</dd>
+<dt id="agnostic_invDes.agnostic_invDes.simulate"><code class="name flex">
+<span>def <span class="ident">simulate</span></span>(<span>self, x)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Primary API for simulation. Runs a simulation given a set of optimization parameters.</p>
+<h2 id="arguments">Arguments</h2>
+<p><code>x</code>: Array-like of floats. Current values of optimization parameters, such that <code>x[m]</code>=phi_m</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">simulate</span>(<span class="hljs-params">self,x</span>):</span>
+    <span class="hljs-string">"""Primary API for simulation. Runs a simulation given a set of optimization parameters.
+    
+    ##Arguments
+    
+    `x`: Array-like of floats. Current values of optimization parameters, such that `x[m]`=phi_m
+    """</span>
+    self.simDict[<span class="hljs-string">'parameters'</span>]=x<span class="hljs-comment">#Update the current optimization parameters</span>
+    <span class="hljs-keyword">del</span> self.simDict[<span class="hljs-string">'fields'</span>][:]<span class="hljs-comment">#Clear entries from previous function calls</span>
+    <span class="hljs-keyword">del</span> self.simDict[<span class="hljs-string">'transferMatrices'</span>][:]
+    self.global_bcs=self.globalBoundaries(self.simDict)<span class="hljs-comment">#Get the set of global boundaries given these optimization parameters. Currently, dependence of global boundaries on parameters is not supported, but this is here in case I want to make it possible later</span>
+    self.simDict[<span class="hljs-string">'transferMatrices'</span>]=self.transferMatrices(self.simDict)<span class="hljs-comment">#Get the transfer matrices</span>
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(self.simDict[<span class="hljs-string">'transferMatrices'</span>])):<span class="hljs-comment">#Run through the simPoints</span>
+        gbs=self.global_bcs[k]
+        self.simDict[<span class="hljs-string">'fields'</span>].append(self.solve_e(self.simDict[<span class="hljs-string">'transferMatrices'</span>][k],gbs[<span class="hljs-number">0</span>],gbs[<span class="hljs-number">1</span>],gbs[<span class="hljs-number">2</span>]))<span class="hljs-comment">#Solve for the fields at this simPoint</span>
+    <span class="hljs-keyword">return</span> </code></pre>
+</details>
+</dd>
+<dt id="agnostic_invDes.agnostic_invDes.updatePhysicsFunctions"><code class="name flex">
+<span>def <span class="ident">updatePhysicsFunctions</span></span>(<span>self, costFunction='', costFunction_gradPhi='', costFunction_gradE='', transferMatrices='', transferMatrices_gradPhi='', scheduler='', paramPruner='')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Optionally updates some or all functions passed to the constructor during optimization. Any argument which is not a callable is not updated. See the <code>__init__</code> docstring for a description of the arguments.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">updatePhysicsFunctions</span>(<span class="hljs-params">self,costFunction=<span class="hljs-string">''</span>,costFunction_gradPhi=<span class="hljs-string">''</span>,costFunction_gradE=<span class="hljs-string">''</span>,transferMatrices=<span class="hljs-string">''</span>,transferMatrices_gradPhi=<span class="hljs-string">''</span>,scheduler=<span class="hljs-string">''</span>,paramPruner=<span class="hljs-string">''</span></span>):</span>
+    <span class="hljs-string">"""Optionally updates some or all functions passed to the constructor during optimization. Any argument which is not a callable is not updated. See the `__init__` docstring for a description of the arguments."""</span>
+    <span class="hljs-keyword">if</span> callable(costFunction):
+        self.costFunction=costFunction
+    <span class="hljs-keyword">if</span> callable(costFunction_gradPhi):
+        self.costFunction_gradPhi=costFunction_gradPhi
+    <span class="hljs-keyword">if</span> callable(costFunction_gradE):
+        self.costFunction_gradE=costFunction_gradE
+    <span class="hljs-keyword">if</span> callable(transferMatrices):
+        self.transferMatrices=transferMatrices
+    <span class="hljs-keyword">if</span> callable(transferMatrices_gradPhi):
+        self.transferMatrices_gradPhi=transferMatrices_gradPhi
+    <span class="hljs-keyword">if</span> callable(scheduler):
+        self.scheduler=secheduler
+    <span class="hljs-keyword">if</span> callable(paramPruner):
+        self.paramPruner=paramPruner
+    <span class="hljs-keyword">return</span></code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="agnostic_invDes.optimizationResults"><code class="flex name class">
+<span>class <span class="ident">optimizationResults</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Houses results of the optimization.</p>
+<p>This is intended to be a clone of scipy's <code>OptimizeResults</code> object. Since <code><a title="agnostic_invDes.agnostic_invDes" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.agnostic_invDes">agnostic_invDes</a></code> will terminate and restart <code>minimize</code> on a possibly regular basis, a different object had to be defined to keep track of the actual total number of
+function evaluations, iterations, time taken, etc. Also has the added benefit of being updated dynamically as minimize progresses, so it can be accessed by interfacing code to take a peak at how things are progressing, and
+of having the very useful <code>evo</code> attribute.</p>
+<h2 id="attributes">Attributes</h2>
+<p><code>x</code>: Array-like of floats. Current/final values of optimization parameters, such that <code>x[m]</code>=phi_m</p>
+<p><code>jac</code>: Array-like of floats. Current gradient, such that <code>jac[m]</code>=dL/dphi_m</p>
+<p><code>time</code>: <code>datetime</code> object. Time taken to perform minimization. Will be 0 until minimization completed</p>
+<p><code>evo</code>: List of dictionaries. Tracks the evolution of the cost function and optimization parameters during every iteration of the optimization, such that <code>evo[it]</code>=<code>evoDictInst</code> where</p>
+<pre><code class="hljs bash">    evoDictInst={<span class="hljs-string">'costFunction'</span>:<span class="hljs-comment">#Float, value of cost function at iteration it,</span>
+                 <span class="hljs-string">'parameters'</span>:<span class="hljs-comment">#Array-like of floats, the optimization parameters at iteration it,</span>
+                 <span class="hljs-string">'costFunction-Physical'</span>:<span class="hljs-comment">#Float, the value of the physical component of the cost function at iteration it if provided, else 0,</span>
+                 <span class="hljs-string">'costFunction-Regularization'</span>:<span class="hljs-comment">#Float, the value of the regularization component of the cost function at iteration it if provided, else 0}</span>
+</code></pre>
+<p><code>nfev</code>: Int. Number of function evaluations; will not in general be equal to the number of iterations as linesearch typically involves multiple function calls.</p>
+<p><code>njev</code>: Int. Number of gradient evaluations; will almost always be equal to <code>nfev</code>.</p>
+<p><code>nit</code>: Int. Number of optimization iterations.</p>
+<p><code>maxcv</code>: Float. Maximum constraint violation.</p>
+<p><code>success</code>: Bool, whether optimizer exited successfully.</p>
+<p><code>status</code>: Int. Termination status of the optimizer.</p>
+<p><code>fun</code>: Float. Final value of the cost function.</p>
+<p><code>message</code>: Description of cause of termination.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">optimizationResults</span>:</span>
+    <span class="hljs-string">"""Houses results of the optimization.
+    
+    This is intended to be a clone of scipy's `OptimizeResults` object. Since `agnostic_invDes` will terminate and restart `minimize` on a possibly regular basis, a different object had to be defined to keep track of the actual total number of 
+    function evaluations, iterations, time taken, etc. Also has the added benefit of being updated dynamically as minimize progresses, so it can be accessed by interfacing code to take a peak at how things are progressing, and 
+    of having the very useful `evo` attribute.
+    
+    ##Attributes
+    
+    `x`: Array-like of floats. Current/final values of optimization parameters, such that `x[m]`=phi_m
+    
+    `jac`: Array-like of floats. Current gradient, such that `jac[m]`=dL/dphi_m
+    
+    `time`: `datetime` object. Time taken to perform minimization. Will be 0 until minimization completed
+    
+    `evo`: List of dictionaries. Tracks the evolution of the cost function and optimization parameters during every iteration of the optimization, such that `evo[it]`=`evoDictInst` where
+    ```
+        evoDictInst={'costFunction':#Float, value of cost function at iteration it,
+                     'parameters':#Array-like of floats, the optimization parameters at iteration it,
+                     'costFunction-Physical':#Float, the value of the physical component of the cost function at iteration it if provided, else 0,
+                     'costFunction-Regularization':#Float, the value of the regularization component of the cost function at iteration it if provided, else 0}
+    ```
+     
+    `nfev`: Int. Number of function evaluations; will not in general be equal to the number of iterations as linesearch typically involves multiple function calls.
+    
+    `njev`: Int. Number of gradient evaluations; will almost always be equal to `nfev`.
+    
+    `nit`: Int. Number of optimization iterations.
+    
+    `maxcv`: Float. Maximum constraint violation.
+    
+    `success`: Bool, whether optimizer exited successfully.
+    
+    `status`: Int. Termination status of the optimizer.
+    
+    `fun`: Float. Final value of the cost function.
+    
+    `message`: Description of cause of termination.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span> 
+        self.x=<span class="hljs-string">'Optimization Failure'</span>
+        self.jac=<span class="hljs-string">'Optimization Failure'</span>
+        self.time=<span class="hljs-number">0</span>
+        self.evo=[]
+        self.nfev=<span class="hljs-number">0</span>
+        self.njev=<span class="hljs-number">0</span>
+        self.nit=<span class="hljs-number">0</span>
+        self.maxcv=<span class="hljs-number">0</span>
+        self.success=<span class="hljs-literal">False</span>
+        self.status=<span class="hljs-number">0</span>
+        self.fun=<span class="hljs-number">0</span>
+        self.message=<span class="hljs-string">'Optimization Failure'</span>
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prep_display</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""Sets up printout of object"""</span>
+        vs=<span class="hljs-string">''</span>
+        xcopy=deepcopy(self.x)
+        jaccopy=deepcopy(self.jac)
+        <span class="hljs-keyword">if</span> len(self.x)&gt;<span class="hljs-number">10</span>:
+            x1str,x2str=str(list(xcopy[:<span class="hljs-number">5</span>])),str(list(xcopy[<span class="hljs-number">-5</span>:]))
+            xcopy=x1str.rstrip(<span class="hljs-string">']'</span>)+<span class="hljs-string">',...,'</span>+x2str.lstrip(<span class="hljs-string">'['</span>)
+            jac1str,jac2str=str(list(jaccopy[:<span class="hljs-number">5</span>])),str(list(jaccopy[<span class="hljs-number">-5</span>:]))
+            jaccopy=jac1str.rstrip(<span class="hljs-string">']'</span>)+<span class="hljs-string">',...,'</span>+jac2str.lstrip(<span class="hljs-string">'['</span>)
+        evo_str=str(self.evo)
+        vs+=(<span class="hljs-string">'message: '</span>+self.message+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'success: '</span>+str(self.success)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">' status: '</span>+str(self.status)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    fun: '</span>+str(self.fun)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'      x: '</span>+str(xcopy)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    nit: '</span>+str(self.nit)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    jac: '</span>+str(jaccopy)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'   nfev: '</span>+str(self.nfev)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'   njev: '</span>+str(self.njev)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'   time: '</span>+str(self.time)+<span class="hljs-string">'\n'</span>)
+        vs+=(<span class="hljs-string">'    evo: '</span>+evo_str[:<span class="hljs-number">20</span>]+<span class="hljs-string">'...'</span>+evo_str[<span class="hljs-number">-10</span>:])
+        <span class="hljs-keyword">return</span> vs
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__repr__</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""What happens to the object when you try and display it in console"""</span>
+        vs=self.prep_display()
+        <span class="hljs-keyword">return</span> vs
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""What happens to the object when you try and turn it into a string"""</span>
+        vs=self.prep_display()
+        <span class="hljs-keyword">return</span> vs</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="agnostic_invDes.optimizationResults.prep_display"><code class="name flex">
+<span>def <span class="ident">prep_display</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets up printout of object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prep_display</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""Sets up printout of object"""</span>
+    vs=<span class="hljs-string">''</span>
+    xcopy=deepcopy(self.x)
+    jaccopy=deepcopy(self.jac)
+    <span class="hljs-keyword">if</span> len(self.x)&gt;<span class="hljs-number">10</span>:
+        x1str,x2str=str(list(xcopy[:<span class="hljs-number">5</span>])),str(list(xcopy[<span class="hljs-number">-5</span>:]))
+        xcopy=x1str.rstrip(<span class="hljs-string">']'</span>)+<span class="hljs-string">',...,'</span>+x2str.lstrip(<span class="hljs-string">'['</span>)
+        jac1str,jac2str=str(list(jaccopy[:<span class="hljs-number">5</span>])),str(list(jaccopy[<span class="hljs-number">-5</span>:]))
+        jaccopy=jac1str.rstrip(<span class="hljs-string">']'</span>)+<span class="hljs-string">',...,'</span>+jac2str.lstrip(<span class="hljs-string">'['</span>)
+    evo_str=str(self.evo)
+    vs+=(<span class="hljs-string">'message: '</span>+self.message+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'success: '</span>+str(self.success)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">' status: '</span>+str(self.status)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'    fun: '</span>+str(self.fun)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'      x: '</span>+str(xcopy)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'    nit: '</span>+str(self.nit)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'    jac: '</span>+str(jaccopy)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'   nfev: '</span>+str(self.nfev)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'   njev: '</span>+str(self.njev)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'   time: '</span>+str(self.time)+<span class="hljs-string">'\n'</span>)
+    vs+=(<span class="hljs-string">'    evo: '</span>+evo_str[:<span class="hljs-number">20</span>]+<span class="hljs-string">'...'</span>+evo_str[<span class="hljs-number">-10</span>:])
+    <span class="hljs-keyword">return</span> vs</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="agnostic_invDes.termOpt"><code class="flex name class">
+<span>class <span class="ident">termOpt</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Nothing to see here. Move along.</p>
+<p>Since I have very little control of <code><a title="scipy.minimize" href="http://localhost:8080/scipy.minimize.ext">scipy.minimize</a></code> via the api, I had to get creative to allow for dynamic scheduling/parameter mutation during optimization. This is a special
+exception defined for that purpose. You as a user should never see it raised.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">termOpt</span>(<span class="hljs-params">Exception</span>):</span>
+    <span class="hljs-string">"""Nothing to see here. Move along.
+    
+        Since I have very little control of `scipy.minimize` via the api, I had to get creative to allow for dynamic scheduling/parameter mutation during optimization. This is a special
+        exception defined for that purpose. You as a user should never see it raised.
+    """</span>
+    <span class="hljs-keyword">pass</span></code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="builtins.Exception" href="http://localhost:8080/builtins.Exception.ext">builtins.Exception</a></li>
+<li><a title="builtins.BaseException" href="http://localhost:8080/builtins.BaseException.ext">builtins.BaseException</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="http://localhost:8080/agnostic_invDes/#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="agnostic_invDes.random" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.random">random</a></code></li>
+</ul>
+</li>
+<li><h3><a href="http://localhost:8080/agnostic_invDes/#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="agnostic_invDes.agnostic_invDes" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.agnostic_invDes">agnostic_invDes</a></code></h4>
+<ul class="">
+<li><code><a title="agnostic_invDes.agnostic_invDes.callback" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.agnostic_invDes.callback">callback</a></code></li>
+<li><code><a title="agnostic_invDes.agnostic_invDes.optimize" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.agnostic_invDes.optimize">optimize</a></code></li>
+<li><code><a title="agnostic_invDes.agnostic_invDes.simulate" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.agnostic_invDes.simulate">simulate</a></code></li>
+<li><code><a title="agnostic_invDes.agnostic_invDes.updatePhysicsFunctions" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.agnostic_invDes.updatePhysicsFunctions">updatePhysicsFunctions</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="agnostic_invDes.optimizationResults" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.optimizationResults">optimizationResults</a></code></h4>
+<ul class="">
+<li><code><a title="agnostic_invDes.optimizationResults.prep_display" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.optimizationResults.prep_display">prep_display</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="agnostic_invDes.termOpt" href="http://localhost:8080/agnostic_invDes.html#agnostic_invDes.termOpt">termOpt</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script>
+setInterval(() =>
+fetch(window.location.href, {
+method: "HEAD",
+cache: "no-store",
+headers: {"If-None-Match": "1688585588.432135"},
+}).then(response => response.ok && window.location.reload()), 700);
+</script>
+
+</body></html>
