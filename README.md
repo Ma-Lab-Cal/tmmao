@@ -4,7 +4,12 @@ Physics-agnostic inverse design, based on transfer matrix method
 
 ## Description
 ---
-This module (soon to be package!) is an implementation of adjoint-gradient-based inverse design using the transfer matrix method.
+This module (soon to be package!) is an implementation of adjoint-gradient-based inverse design using the transfer matrix method. If 
+If you find any part of the `tmmao` package helpful and you happen to use it a publication of your own, please cite our work introducing the algorithm:
+
+> N. Morrison, S. Pan, and E. Ma, "Physics-Agnostic Inverse Design Using Transfer Matrices", under review, 2023.
+
+Thanks!
 
 ### `angostic_linear_adjoint.py`
 The central piece of code is `angostic_linear_adjoint.py`. You hand it your transfer matrices, cost funciton, and their partial derivatives, and it will hand you the total derivative of your cost function with respect to the optimization parameters - exactly the quantity a gradient-descent or quasi-Newton optimizer needs to figure out how to update the optimization paramters to minimize your cost function. `angostic_linear_adjoint.py`'s algorithm is, as the name implies, agnostic. It does not care what kind of physics you're working with - optics, acoustics, quantum mechanics, electronics, etc. It doesn't even care why you need the gradient. Maybe you're not doing an optimization and you just like Jacobians. `angostic_linear_adjoint.py` doesn't care. It just finds the gradient. That's what it does. `angostic_linear_adjoint.py` has a fully documented API, and you are encouraged to integrate it into your own optimziation routines. 
